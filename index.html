@@ -374,6 +374,7 @@
     .btn-cta { width: 100%; text-align: center; }
   }
 </style>
+<style>.cta-hit{position:absolute;inset:0;z-index:5;display:block}</style>
 </head>
 <body>
 
@@ -580,7 +581,7 @@
   </section>
 
   <!-- CTA -->
-  <div class="cta-block">
+  <div class="cta-block" style="position:relative"><a class="cta-hit" href="https://t.me/mastodont_aibot?start=mini_kurs" target="_blank" rel="noopener" aria-label="Забрать интенсив"></a>
     <div class="cta-kicker">⭐️📹 видео-гайд · июль</div>
     <h2>Старт и первые <span class="grad">$2000+</span> в ИИ</h2>
     <p class="cta-lead">Для тех, кто хочет <b>СОЗДАВАТЬ И ЗАРАБАТЫВАТЬ</b>, а не коллекционировать нейронки и мёртвые проекты в папке 🤑</p>
@@ -645,21 +646,5 @@ document.querySelectorAll('.copy-btn').forEach(function(btn){
 </script>
 
 
-<script>
-/* clickable-cta: вся карточка интенсива кликабельна */
-(function(){
-  var sels = '.cta, .cta-wrap, .cta-card, .ctabox, .intensiv-card, .cta-section';
-  document.querySelectorAll(sels).forEach(function(box){
-    if (box.tagName === 'A') return;
-    var link = box.querySelector('a[href*="mastodont_aibot"]');
-    if (!link) return;
-    box.style.cursor = 'pointer';
-    box.addEventListener('click', function(e){
-      if (e.target.closest('a')) return;
-      window.open(link.href, '_blank', 'noopener');
-    });
-  });
-})();
-</script>
 </body>
 </html>
